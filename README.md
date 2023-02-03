@@ -2,6 +2,6 @@
 
 ### [Live Site](https://majidalilouch.github.io/Elzero)
 
-![Elzero](https://www.dropbox.com/s/2lo8p5vgzdj7bs1/leon.png?dl=0)
+[![elzero.png](https://i.postimg.cc/vH0nBKDx/elzero.png)](https://postimg.cc/vc6T23rG)
 
 This is a code repository for practicing on HTML and CSS
