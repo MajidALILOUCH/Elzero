@@ -851,6 +851,11 @@ header .container .mega-menu .links li i {
   background-color: var(--main-color);
   top: 0;
   left: 0;
+  transition: width 0.3s linear;
+  -webkit-transition: width 0.3s linear;
+  -moz-transition: width 0.3s linear;
+  -ms-transition: width 0.3s linear;
+  -o-transition: width 0.3s linear;
 }
 /* end skills */
 /* start funcionamiento */
