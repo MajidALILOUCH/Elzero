@@ -30,27 +30,24 @@ let counter = setInterval(() => {
   }
 }, 1000);
 
-// Animate Width On Scrolling
+// Animate Width On Scrolling and Increase Numbers On Scrolling.
 
+let progressSpans = document.querySelectorAll(".the-progress span");
 let section = document.querySelector(".our-skills");
-let spans = document.querySelectorAll(".the-progress span");
 
-window.onscroll = function () {
-  if (window.scrollY >= section.offsetTop - 300) {
-    spans.forEach((span) => {
-      span.style.width = span.dataset.width;
-    });
-  }
-};
-
-// Increase Numbers On Scrolling
-
-let nums = document.querySelectorAll(".box .number");
-let statSection = document.querySelector(".stats");
+let nums = document.querySelectorAll(".stats .number");
+let statsSection = document.querySelector(".stats");
 let started = false; // Function Started ? No
 
 window.onscroll = function () {
-  if (window.scrollY >= statSection.offsetTop) {
+  // Skills Animate Width
+  if (window.scrollY >= section.offsetTop - 250) {
+    progressSpans.forEach((span) => {
+      span.style.width = span.dataset.width;
+    });
+  }
+  // Stats Increase Number
+  if (window.scrollY >= statsSection.offsetTop) {
     if (!started) {
       nums.forEach((num) => startCount(num));
     }
