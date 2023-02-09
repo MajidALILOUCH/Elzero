@@ -47,7 +47,7 @@ window.onscroll = function () {
     });
   }
   // Stats Increase Number
-  if (window.scrollY >= statsSection.offsetTop) {
+  if (window.scrollY >= statsSection.offsetTop - 250) {
     if (!started) {
       nums.forEach((num) => startCount(num));
     }
