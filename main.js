@@ -1,3 +1,5 @@
+// Countdown Timer ###################################################################
+
 // The End Of The Year Date To Countdown To
 // 1000 milliseconds = 1 Second
 
@@ -30,7 +32,9 @@ let counter = setInterval(() => {
   }
 }, 1000);
 
-// Animate Width On Scrolling and Increase Numbers On Scrolling.
+// Animate Width On Scrolling
+// Increase Numbers On Scrolling
+// Scroll To Top
 
 let progressSpans = document.querySelectorAll(".the-progress span");
 let section = document.querySelector(".our-skills");
@@ -39,20 +43,26 @@ let nums = document.querySelectorAll(".stats .number");
 let statsSection = document.querySelector(".stats");
 let started = false; // Function Started ? No
 
+let span = document.querySelector(".up");
+
 window.onscroll = function () {
-  // Skills Animate Width
+  // Animate Width On Scrolling
   if (window.scrollY >= section.offsetTop - 250) {
     progressSpans.forEach((span) => {
       span.style.width = span.dataset.width;
     });
   }
-  // Stats Increase Number
+  // Increase Numbers On Scrolling
   if (window.scrollY >= statsSection.offsetTop - 250) {
     if (!started) {
       nums.forEach((num) => startCount(num));
     }
     started = true;
   }
+  // Scroll To Top
+  this.scrollY >= 1000
+    ? span.classList.add("show")
+    : span.classList.remove("show");
 };
 
 function startCount(el) {
@@ -64,3 +74,10 @@ function startCount(el) {
     }
   }, 2000 / goal);
 }
+
+span.onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};

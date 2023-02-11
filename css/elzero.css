@@ -1559,6 +1559,29 @@ footer .copy {
   margin-top: 60px;
 }
 /* end footer */
+/* scroll to top */
+.up {
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: none;
+  position: fixed;
+  right: -60px;
+  bottom: 20px;
+  cursor: pointer;
+  transition: var(--main-transition);
+  z-index: 999;
+}
+@media (max-width: 767px) {
+  .up {
+    display: block;
+  }
+}
+.up.show {
+  right: 20px;
+}
 /* start animation */
 @keyframes up-and-down {
   0%,
