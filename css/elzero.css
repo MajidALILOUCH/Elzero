@@ -1563,24 +1563,19 @@ footer .copy {
 .up {
   background-color: var(--main-color);
   color: white;
-  padding: 10px;
+  padding: 15px;
   border-radius: 5px;
   font-weight: bold;
-  display: none;
+  display: block;
   position: fixed;
   right: -60px;
-  bottom: 20px;
+  bottom: 25px;
   cursor: pointer;
   transition: var(--main-transition);
   z-index: 999;
 }
-@media (max-width: 767px) {
-  .up {
-    display: block;
-  }
-}
 .up.show {
-  right: 20px;
+  right: 25px;
 }
 /* start animation */
 @keyframes up-and-down {
