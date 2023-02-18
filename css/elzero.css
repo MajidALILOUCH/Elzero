@@ -22,6 +22,18 @@ html {
 body {
   font-family: "Cairo", sans-serif;
 }
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: 0 0 10px #ddd inset;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--main-color-alt);
+}
 a {
   text-decoration: none;
 }
@@ -116,6 +128,11 @@ ul {
   height: 204px;
   position: absolute;
   background-repeat: no-repeat;
+}
+@media (max-width: 767px) {
+  .dots {
+    display: none;
+  }
 }
 .dots-up {
   right: 0;
@@ -975,7 +992,7 @@ header .container .mega-menu .links li i {
 .events .container .info .time .unit {
   border: 1px solid #d4d4d4;
   border-radius: 5px;
-  width: 90px;
+  width: 80px;
   text-align: center;
   transition: var(--main-transition);
 }
@@ -1114,7 +1131,7 @@ header .container .mega-menu .links li i {
     bottom: 20px;
   }
 }
-.pricing .container .box:nth-last-of-type(2) .label {
+.pricing .container .box.popular .label {
   position: absolute;
   writing-mode: vertical-rl;
   background-color: var(--main-color);
@@ -1127,7 +1144,7 @@ header .container .mega-menu .links li i {
   top: 0;
   text-transform: capitalize;
 }
-.pricing .container .box:nth-last-of-type(2) .label::before {
+.pricing .container .box.popular .label::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1565,7 +1582,7 @@ footer .copy {
 .up {
   background-color: var(--main-color);
   color: white;
-  padding: 15px;
+  padding: 12px;
   border-radius: 5px;
   font-weight: bold;
   display: block;
@@ -1628,7 +1645,7 @@ footer .copy {
   100% {
     right: 0;
     border-radius: 0;
-    width: 50%;
+    width: 51%;
     height: 100%;
   }
 }
