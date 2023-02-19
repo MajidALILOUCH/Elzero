@@ -1453,6 +1453,28 @@ header .container .mega-menu .links li i {
   max-width: 100%;
 }
 /* end discount */
+/* scroll to top */
+.up {
+  background-color: var(--main-color);
+  color: white;
+  padding: 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: block;
+  position: fixed;
+  right: -60px;
+  bottom: 25px;
+  cursor: pointer;
+  transition: var(--main-transition);
+  z-index: 999;
+}
+.up:hover {
+  background-color: var(--main-color-alt);
+}
+.up.show {
+  right: 25px;
+}
+/* end scroll to top */
 /* start footer */
 footer {
   background-color: #191919;
@@ -1476,15 +1498,13 @@ footer .container .box h3 {
 }
 footer .container .box .social {
   display: flex;
+  gap: 10px;
   margin-bottom: 20px;
 }
 @media (max-width: 767px) {
   footer .container .box .social {
     justify-content: center;
   }
-}
-footer .container .box .social li {
-  margin-right: 10px;
 }
 footer .container .box .social li a {
   background-color: #313131;
@@ -1519,7 +1539,7 @@ footer .container .box .links li:not(:last-child) {
   border-bottom: 1px solid #444;
 }
 footer .container .box .links li:hover {
-  padding-left: 10px;
+  transform: translateX(10px);
 }
 footer .container .box .links li:hover a {
   color: white;
@@ -1578,27 +1598,6 @@ footer .copy {
   margin-top: 60px;
 }
 /* end footer */
-/* scroll to top */
-.up {
-  background-color: var(--main-color);
-  color: white;
-  padding: 12px;
-  border-radius: 5px;
-  font-weight: bold;
-  display: block;
-  position: fixed;
-  right: -60px;
-  bottom: 25px;
-  cursor: pointer;
-  transition: var(--main-transition);
-  z-index: 999;
-}
-.up:hover {
-  background-color: var(--main-color-alt);
-}
-.up.show {
-  right: 25px;
-}
 /* start animation */
 @keyframes up-and-down {
   0%,
